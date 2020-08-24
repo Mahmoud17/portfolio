@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+header,
+.intro,
+.about-me {
+  padding: 1em;
+}
+header {
+  display: grid;
+  grid-template-columns: 100px calc(100% - 130px) 30px;
+  grid-template-rows: 30px auto;
+  grid-template-areas:
+    "logo blank toggle"
+    "nav nav nav";
+}
+.logo img {
+  width: 100px;
+}
+.nav-toggle {
+  width: 30px;
+  grid-area: toggle;
+}
+nav {
+  grid-area: nav;
+}
+.toggle {
+  height: 0;
+  overflow: hidden;
+}
+.nav__list {
+  list-style: none;
+  padding-left: 0;
+  transition: 0.5s;
+}
+.nav__item:not(:last-child) {
+  margin-bottom: 1em;
+}
+.nav__link {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: black;
+  border-bottom: 2px solid #16e0bd;
+}
+
+.section__title {
+  text-align: center;
+  font-size: 3em;
+  font-weight: 300;
+  margin-top: 0;
+}
+strong {
+  font-weight: bold;
+}
+.section__subtitle {
+  text-align: center;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  position: relative;
+  padding: 0.3em;
+  letter-spacing: 4px;
+  color: #1c4b43;
+}
+.section__subtitle::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: #16e0bd;
+  z-index: -1;
+}
+img {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+.my-services {
+  background: #2e2e2e;
+  text-align: center;
+  padding: 2em;
+  color: white;
+}
+.section__title--services {
+  color: #14cfae;
+  position: relative;
+  margin-top: 0;
+}
+.section__title--services::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 40%;
+  height: 2px;
+  width: 20%;
+  background-color: white;
+}
+.service {
+  margin-bottom: 3em;
+}
+
+.service p {
+  font-size: 15px;
+  font-weight: 100;
+  width: 70%;
+  margin: 0 auto;
+}
+.btn {
+  color: #2e2e2e;
+  background-color: #16e0bd;
+  padding: 0.5em 2em;
+  font-size: 18px;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */
